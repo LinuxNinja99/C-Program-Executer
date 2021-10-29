@@ -8,7 +8,7 @@ then
 echo "Usage: <file>" # Echos the usage
 exit 1
 else
-if g++ $1 -o $1.$ext 2>&1 | grep -q 'No such file or directory' # Checks if the file specified exists
+if gcc $1 -o $1.$ext 2>&1 | grep -q 'No such file or directory' # Checks if the file specified exists
 then
 echo "'"$1"'"' No such file or directory' # Echos this message if the file specified does not exist
 exit 1
